@@ -1,4 +1,6 @@
 Mpg::Application.routes.draw do |map|
+  resources :fillups
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

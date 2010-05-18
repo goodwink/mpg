@@ -1,0 +1,13 @@
+%p
+  %b Miles since last fillup:
+  = @fillup.miles_since_last_fillup
+%p
+  %b Gallons:
+  = @fillup.gallons
+%p
+  %b Miles per gallon:
+  = @fillup.mpg
+
+= link_to 'Edit', edit_fillup_path(@fillup)
+\|
+= link_to 'Back', fillups_path

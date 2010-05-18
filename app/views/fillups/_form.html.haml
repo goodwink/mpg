@@ -1,0 +1,16 @@
+= form_for @fillup do |f|
+  -if @fillup.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@fillup.errors.count, "error")} prohibited this fillup from being saved:"
+      %ul
+        - @fillup.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :miles_since_last_fillup
+    = f.text_field :miles_since_last_fillup
+  .field
+    = f.label :gallons
+    = f.text_field :gallons
+  .actions
+    = f.submit 'Save'

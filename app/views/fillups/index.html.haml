@@ -1,0 +1,23 @@
+%h1 Listing fillups
+
+%table
+  %tr
+    %th Miles since last fillup
+    %th Gallons
+    %th Miles per gallon
+    %th
+    %th
+    %th
+
+  - @fillups.each do |fillup|
+    %tr
+      %td= fillup.miles_since_last_fillup
+      %td= fillup.gallons
+      %td= fillup.mpg
+      %td= link_to 'Show', fillup
+      %td= link_to 'Edit', edit_fillup_path(fillup)
+      %td= link_to 'Destroy', fillup, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New fillup', new_fillup_path
